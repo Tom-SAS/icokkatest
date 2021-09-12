@@ -5,8 +5,8 @@ class MapsController < ApplicationController
   end
 
   def create
-    @map = Map.new(map_params)
-    if @map.save
+    map = Map.new(map_params)
+    if map.save
       redirect_to action: :index
     else
       redirect_to action: :index
