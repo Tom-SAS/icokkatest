@@ -4,6 +4,10 @@ class MapsController < ApplicationController
     @map = Map.new
   end
 
+  def new
+    @map = Map.new
+  end
+
   def create
     map = Map.new(map_params)
     if map.save

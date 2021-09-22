@@ -88,16 +88,7 @@
     async defer>
 </script>
 
-<h3>場所投稿フォーム</h3>
-<%= form_for(@map, :url => { controller:'maps', action:'create'})do |f| %>
 
-    <p>
-    <%= f.label :address %>
-    <%= f.text_field :address, size: "50x1" %>
-    </p>
-
-    <%= f.submit "送信"%>
-<% end %>
 
 <h3>場所一覧</h3>
 <% @maps.each do |t| %>
