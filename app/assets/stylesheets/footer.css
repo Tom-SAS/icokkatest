@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+.footer {
+  background-color: #f5f0e6;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.jobwo-footer-icon {
+  width: 2vw;
+  height: 5px;
+  margin: 0 5%;
+}
+.footer-text {
+  display: flex;
+  text-align: right;
+  margin-left: 10vw;
+}
