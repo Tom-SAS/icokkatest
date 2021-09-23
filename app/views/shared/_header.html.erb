@@ -5,11 +5,17 @@
       
       <div class='main-menu'>
         <ul class='lists-left'>
-
           <li><%= link_to '公園情報を投稿する', new_map_path, class: "menu-category" %></li>
-          
         </ul>
-
+       <ul class='lists-right'>
+          <% if user_signed_in? %>
+            <li><%= link_to current_user.nickname, edit_user_registration_path, class:'user-nickname' %></li>
+            <li><%= link_to "Log-out", destroy_user_session_path, method: :delete, class:'log-out' %></li>
+          <% else %>
+            <li><%= link_to 'Sign-up', new_user_registration_path, class:'sign-up' %></li>
+            <li><%= link_to 'Sign-in', new_user_session_path, class:'sign-in' %></li> 
+          <% end %>
+         </ul> 
       </div>
     </header>
   
