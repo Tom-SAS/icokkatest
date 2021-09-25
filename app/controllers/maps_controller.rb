@@ -1,4 +1,5 @@
 class MapsController < ApplicationController
+  
   def index
     @maps = Map.all
     @map = Map.new
@@ -6,6 +7,12 @@ class MapsController < ApplicationController
 
   def new
     @map = Map.new
+  end
+
+  def show
+    @map = Map.find(params[:id])
+    @comment = Comment.new
+    @comments = @map.comments.includes(:user)
   end
 
   def create
