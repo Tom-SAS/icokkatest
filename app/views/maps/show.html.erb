@@ -5,10 +5,16 @@
     <h2 class="name">
       <%= @map.name %>
     </h2>
-<%= image_tag @map.image.variant(resize: '500x500'), class: 'message-image', class: 'message-image' if @map.image.attached? %>
+
     <p>名     前 : <%= @map.name %></p>
     <p>住     所 : <%= @map.address %></p>
     <p>メッセージ : <%= @map.message %></p>
+
+  <div class="messages">
+    <% @map.images.each do |image| %>
+      <%= image_tag image, class:'images' %>
+    <% end %>
+  </div>
   </div>
   <div class="container">
     <% if user_signed_in? %>

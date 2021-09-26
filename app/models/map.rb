@@ -3,7 +3,7 @@ class Map < ApplicationRecord
   after_validation :geocode, if: :address_changed?
   belongs_to :user
   has_many :comments, dependent: :destroy
-  has_one_attached :image
+  has_many_attached :images
 
 
   with_options presence: true do 

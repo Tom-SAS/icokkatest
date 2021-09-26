@@ -1,6 +1,6 @@
 <%= render"shared/header" %>
 <h3>場所投稿フォーム</h3>
-<%= form_for(@map, :url => { controller:'maps', action:'create'})do |f| %>
+<%= form_with model: @map, id: 'new_message', local: true do |f| %>
 
     <p>
     <%= f.label :name %>
@@ -10,10 +10,14 @@
     <%= f.label :message %>
     <%= f.text_field :message, size: "50x1" %>
     <%= f.label :message %>
-    <%= f.file_field :image, class: 'hidden' %>
-
+    <%= f.file_field :images, name: 'map[images][]', class: 'hidden' %>
     </p>
 
     <%= f.submit "送信"%>
+
+          <div id="image-list"></div>
+<% end %>
+<% @map.images.each do |image| %>
+  <%= image_tag image, class: 'images' %>
 <% end %>
 <%= render"shared/footer" %>
