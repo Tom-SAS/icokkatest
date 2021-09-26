@@ -1,10 +1,16 @@
+<%= render"shared/header" %>
 <h3>場所投稿フォーム</h3>
 <%= form_for(@map, :url => { controller:'maps', action:'create'})do |f| %>
 
     <p>
+    <%= f.label :name %>
+    <%= f.text_field :name, size: "50x1" %>
     <%= f.label :address %>
     <%= f.text_field :address, size: "50x1" %>
+    <%= f.label :message %>
+    <%= f.text_field :message, size: "50x1" %>
     </p>
 
     <%= f.submit "送信"%>
 <% end %>
+<%= render"shared/footer" %>

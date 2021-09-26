@@ -25,9 +25,9 @@
         // mapの初期位置, 縮尺を定義
         map = new google.maps.Map(document.getElementById('map'), {
             center: {
-                lat: 35.6458437,
-                lng: 139.7046171
-            },
+                lat: 35.577589027831515,
+                lng: 139.55855998427472,
+            }, 
             zoom: 12,
         });
 
@@ -93,9 +93,9 @@
 <h3>場所一覧</h3>
 <% @maps.each do |t| %>
 
-      <p>住所 :</p><%= link_to t.address, "/maps/#{t.id}", class: :parkdetail %>
-      <p>名前 :</p><%= link_to t.name, "/maps/#{t.id}", class: :parkdetail %>
-
+      <p>住     所 :</p><%= link_to t.address, "/maps/#{t.id}", class: :parkdetail %>
+      <p>名     前 :</p><%= link_to t.name, "/maps/#{t.id}", class: :parkdetail %>
+      <p>メッセージ :</p><%= link_to t.message, "/maps/#{t.id}", class: :parkdetail %>
       <p><%= link_to "削除する", map_path(t.id), method: :delete %></p>
       <hr>
 
