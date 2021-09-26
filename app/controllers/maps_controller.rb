@@ -17,10 +17,12 @@ class MapsController < ApplicationController
 
   def create
     map = Map.new(map_params)
+
     if map.save
       redirect_to action: :index
     else
-      redirect_to action: :index
+      redirect_to action: :new
+
     end
   end
 
@@ -32,6 +34,6 @@ class MapsController < ApplicationController
 
   private
   def map_params
-    params.require(:map).permit(:address, :latitude, :longitude)
+    params.require(:map).permit(:address, :name, :message, :latitude, :longitude)
   end
 end
