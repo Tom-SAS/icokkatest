@@ -34,6 +34,6 @@ class MapsController < ApplicationController
 
   private
   def map_params
-    params.require(:map).permit(:address, :name, :message, :latitude, :longitude).merge(user_id: current_user.id)
+    params.require(:map).permit(:address, :name, :message, :image, :latitude, :longitude).merge(user_id: current_user.id)
   end
 end
