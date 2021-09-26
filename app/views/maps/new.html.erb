@@ -10,11 +10,14 @@
     <%= f.label :message %>
     <%= f.text_field :message, size: "50x1" %>
     <%= f.label :message %>
-    <%= f.file_field :image, class: 'hidden' %>
+    <%= f.file_field :images, name: 'map[images][]', class: 'hidden' %>
     </p>
 
     <%= f.submit "送信"%>
 
           <div id="image-list"></div>
+<% end %>
+<% @map.images.each do |image| %>
+  <%= image_tag image, class: 'images' %>
 <% end %>
 <%= render"shared/footer" %>
