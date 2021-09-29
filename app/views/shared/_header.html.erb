@@ -1,6 +1,6 @@
     <header class='header'>
       <div class='header-logo'>
-        <%= link_to image_tag("header_logo.png", class:"icokka-icon"), "/" %>
+        <%= link_to image_tag("icokka_logo.png", class:"icokka-icon"), "/" %>
       </div>
       
       <div class='main-menu'>
@@ -9,11 +9,11 @@
         </ul>
        <ul class='lists-right'>
           <% if user_signed_in? %>
-            <li><%= link_to current_user.nickname, edit_user_registration_path, class:'user-nickname' %></li>
-            <li><%= link_to "Log-out", destroy_user_session_path, method: :delete, class:'log-out' %></li>
+            <li><%= link_to "ようこそ、" + current_user.nickname + "さん", edit_user_registration_path, class:'user-nickname' %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:'logout' %></li>
           <% else %>
-            <li><%= link_to 'Sign-up', new_user_registration_path, class:'sign-up' %></li>
-            <li><%= link_to 'Sign-in', new_user_session_path, class:'sign-in' %></li> 
+            <li><%= link_to 'ユーザー登録', new_user_registration_path, class:'sign-up' %></li>
+            <li><%= link_to 'ログイン', new_user_session_path, class:'login' %></li> 
           <% end %>
          </ul> 
       </div>

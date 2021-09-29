@@ -1,17 +1,11 @@
-<h2>Google map</h2>
 
 <input id="address" type="textbox" value="">
-<input type="button" value="地図を検索" onclick="codeAddress()">
-<div id="display">緯度経度が表示されるよ！</div>
+<input type="button" value="行きたい場所を検索" onclick="codeAddress()">
+<div id="display"></div>
 
 <div id='map'></div>
 
-<style>
-    #map {
-        height: 400px;
-        width: 400px;
-    }
-</style>
+
 
 <script>
     let map
@@ -28,7 +22,7 @@
                 lat: 35.577589027831515,
                 lng: 139.55855998427472,
             }, 
-            zoom: 12,
+            zoom: 14,
         });
 
         // mapsテーブルにあるそれぞれのレコードをmap上に表示 
@@ -47,7 +41,7 @@
             // 投稿の詳細ページへのリンクも
             var infowindow = new google.maps.InfoWindow({
             position: {lat: <%= m.latitude %>, lng: <%= m.longitude %>},
-            content: "<a href='<%= map_url(m.id) %>' target='_blank'><%= m.address %></a>"
+            content: "<a href='<%= map_url(m.id) %>' target='_blank'><%=m.name %></a>"
             });
 
             // クリックしたときに情報ウィンドウを表示
@@ -90,12 +84,12 @@
 
 
 
-<h3>場所一覧</h3>
+<div class="main-title">公園一覧</div>
 <% @maps.each do |t| %>
-      <p>住     所 :</p><%= link_to t.address, "/maps/#{t.id}", class: :parkdetail %>
-      <p>名     前 :</p><%= link_to t.name, "/maps/#{t.id}", class: :parkdetail %>
-      <p>メッセージ :</p><%= link_to t.message, "/maps/#{t.id}", class: :parkdetail %>
-      <p><%= link_to "削除する", map_path(t.id), method: :delete %></p>
+      <li>名     前 :<%= link_to t.name, "/maps/#{t.id}", class: :parkdetail %></li>
+      <li>住     所 :</li><%= link_to t.address, "/maps/#{t.id}", class: :parkdetail %>
+      <li>メッセージ :</li><%= link_to t.message, "/maps/#{t.id}", class: :parkdetail %>
+   
       <hr>
 
 <% end %>
