@@ -5,11 +5,11 @@
     <h2 class="name">
       <%= @map.name %>
     </h2>
-
-    <p>名     前 : <%= @map.name %></p>
-    <p>住     所 : <%= @map.address %></p>
-    <p>メッセージ : <%= @map.message %></p>
-
+      <h3>住     所 : <%= @map.address %></h3>
+      <h3>メッセージ : <%= @map.message %></h3>
+   <% if user_signed_in? && @map.user_id == current_user.id %>
+      <%= link_to "削除する", map_path(@map.id), method: :delete %>
+   <% end %>
   <div class="messages">
     <% @map.images.each do |image| %>
       <%= image_tag image, class:'images' %>
@@ -25,14 +25,17 @@
     <% else %>
       <p><%= link_to "ログインしてコメントを投稿する", new_user_session_path, method: :get %></p>
     <% end %>
+ 
   </div>
 
 </div>
 
 <div class="comment-index">
-  <h3>コメント一覧</h3>
+  <h2>コメント一覧</h2>
+  <div class="comments">
   <% @comments.each do|comment|%>
-  <%= comment.text %> / <%= comment.user.nickname %>
+  <p><span><%= comment.text %></span>  投稿者：<%= comment.user.nickname %></p> 
   <% end %>
+  </div>
 </div>
 <%= render "shared/footer" %>

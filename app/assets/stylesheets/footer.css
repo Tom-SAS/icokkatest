@@ -10,9 +10,8 @@
   flex-direction: row;
   align-items: center;
 }
-.jobwo-footer-icon {
-  width: 2vw;
-  height: 5px;
+.footer-logo {
+  width: 5vw;
   margin: 0 5%;
 }
 .footer-text {
