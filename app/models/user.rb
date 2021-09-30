@@ -5,5 +5,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :maps
   has_many :comments
-  validates :nickname, presence: true, length: { maximum: 6 }
+
+  with_options presence: true do
+    validates :nickname
+    validates :email
+    validates :password
+    validates :password_confirmation
+  end
+
+  validates :nickname, length: { maximum: 6 }
 end
