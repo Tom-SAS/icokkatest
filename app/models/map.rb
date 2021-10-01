@@ -9,6 +9,7 @@ class Map < ApplicationRecord
   with_options presence: true do 
     validates :name
     validates :address
+    validates :message
   end
 
   # validates :content, presence: true, unless: :was_attached?
