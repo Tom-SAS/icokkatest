@@ -1,24 +1,16 @@
 # アプリ名
 **ICokka(いこっか)**
-![1](https://user-images.githubusercontent.com/82088738/133511146-c616641a-080e-40b9-9d99-b7ed088cb950.png)
+[![Image from Gyazo](https://i.gyazo.com/2d174ea1e59b69545c44593bddaae8b0.gif)](https://gyazo.com/2d174ea1e59b69545c44593bddaae8b0)
 
 # 概要
 
-**田園都市線沿線の公園情報**を投稿し、それに対してコメントを投稿できる**情報交換サイト**。
+**横浜市青葉区・都筑区の公園情報**を投稿し、それに対してコメントを投稿できる**情報交換サイト**。
 
  **地元に密着した情報**を提供することで、近場で子供と遊べる場所を探している人に利用してもらいたい。
 
 # 本番環境
 
 *準備中*
-
-ログイン情報（テスト用）
-
-ニックネーム：テスト
-
-パスワード:test1234
-
-メールアドレス：test@test.com
 
 
 # 制作背景（意図）
@@ -44,7 +36,16 @@
 
 # DEMO
 
-*準備中*
+公園情報を投稿する
+[![Image from Gyazo](https://i.gyazo.com/09ae7b02fda4b2167fd01f411c414999.gif)](https://gyazo.com/09ae7b02fda4b2167fd01f411c414999)
+
+公園の詳細情報を閲覧する
+[![Image from Gyazo](https://i.gyazo.com/4330b51e35d0b0b266cd860cafe6ec23.gif)](https://gyazo.com/4330b51e35d0b0b266cd860cafe6ec23)
+
+公園情報にコメントする
+[![Image from Gyazo](https://i.gyazo.com/2abbdd9047dd850698277971612e4f4e.gif)](https://gyazo.com/2abbdd9047dd850698277971612e4f4e)
+
+
 
 # 工夫したポイント
 
@@ -61,11 +62,11 @@
 <dt>データベース</dt>
 <dd>Mysql</dd>
 <dt>インフラ</dt>
-<dd>Docker,Heroku</dd>
+<dd>Heroku(準備中)</dd>
 <dt>WEBサーバー</dt>
 <dd>nginx</dd>
 <dt>アプリケーションサーバー</dt>
-<dd>Unicorn</dd>
+<dd>Puma</dd>
 <dt>ソース管理</dt>
 <dd>Github, GithubDesktop</dd>
 <dt>テスト</dt>
@@ -73,9 +74,9 @@
 </dl>
 
 # 今後の課題
-- 天気APIを使って天気を表示させる予定。
-  - 天気を確認してから公園の情報を確認する作業を無くすことが本来やりたかったことではある。現在実装に向けて準備中。 
-- 可読性を上げるためにserviceであったり、helperをもっと活用する。
+- 見た目をユーザーフレンドリーにする
+  - scssなど見た目の調整がまだまだ必要。勉強中です。 
+- コードの可読性を上げるためにserviceであったり、helperをもっと活用する。
   - サイトに記載されているコードの模写している部分は非常に可読性が低い。よって、自分でコードを整理しながら理解度を上げる。
 - CircleCIを使ってメンテナンス性を上げる。
   - 開発環境の効率化を図ることで生産性を上げたい。現在勉強中。
