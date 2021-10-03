@@ -1,6 +1,6 @@
 # アプリ名
 **ICokka(いこっか)**
-[![Image from Gyazo](https://i.gyazo.com/2d174ea1e59b69545c44593bddaae8b0.gif)](https://gyazo.com/2d174ea1e59b69545c44593bddaae8b0)
+[![Image from Gyazo](https://i.gyazo.com/09e02fc8cfd1e52c42d7f9321d545466.gif)](https://gyazo.com/09e02fc8cfd1e52c42d7f9321d545466)
 
 # 概要
 
@@ -40,7 +40,7 @@
 [![Image from Gyazo](https://i.gyazo.com/09ae7b02fda4b2167fd01f411c414999.gif)](https://gyazo.com/09ae7b02fda4b2167fd01f411c414999)
 
 公園の詳細情報を閲覧する
-[![Image from Gyazo](https://i.gyazo.com/4330b51e35d0b0b266cd860cafe6ec23.gif)](https://gyazo.com/4330b51e35d0b0b266cd860cafe6ec23)
+[![Image from Gyazo](https://i.gyazo.com/a85886f47c5c671fd1c41926ca4fb83f.gif)](https://gyazo.com/a85886f47c5c671fd1c41926ca4fb83f)
 
 公園情報にコメントする
 [![Image from Gyazo](https://i.gyazo.com/2abbdd9047dd850698277971612e4f4e.gif)](https://gyazo.com/2abbdd9047dd850698277971612e4f4e)
