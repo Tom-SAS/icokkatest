@@ -1,5 +1,5 @@
-# アプリ名
-**ICokka(いこっか)**
+# アプリ名/ICokka(いこっか)
+
 [![Image from Gyazo](https://i.gyazo.com/09e02fc8cfd1e52c42d7f9321d545466.gif)](https://gyazo.com/09e02fc8cfd1e52c42d7f9321d545466)
 
 # 概要
