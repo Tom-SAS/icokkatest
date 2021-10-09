@@ -10,8 +10,11 @@
 
 # 本番環境
 
-*準備中*
+https://icokkatest.herokuapp.com/　
 
+ログインID
+email: test@gmail.com
+password: testtest1
 
 # 制作背景（意図）
 
